@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="main-content mt-150">
+        <div class="main-content-inner">
+            <form method="post">
+
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <input type="submit" value="Registrate">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

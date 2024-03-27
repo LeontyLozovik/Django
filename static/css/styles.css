@@ -1,0 +1,74 @@
+* {
+    margin: 0px
+}
+
+.nav-text-color {
+    text-decoration: none;
+    color: #66A5AD;
+}
+
+.nav-text-color: hover {
+    color: red;
+}
+
+.li-reg {
+    margin-right: 5px;
+}
+
+.reg-btn {
+    border: 2px solid #66A5AD;
+    border-radius: 13px;
+}
+
+.body-color {
+    background-color: #C4DFE6;
+}
+
+.header-color {
+    background-color: #07575B;
+}
+
+.main-container {
+    display: flex; /* Устанавливаем контейнер как flex-контейнер */
+    flex-direction: column; /* Располагаем элементы в столбец */
+    min-height: 100vh; /* Минимальная высота контейнера на весь экран */
+}
+
+    /* Стили для содержимого */
+.main-content {
+    flex: 1; /* Занимаем всё доступное пространство */
+    display: flex; /* Устанавливаем элемент как flex-элемент */
+    justify-content: center; /* Выравниваем содержимое по горизонтали */
+}
+
+    /* Стили для содержимого */
+.main-content-inner {
+    text-align: left; /* Центрируем текст по центру */
+    padding-left: 10%
+}
+
+.font-200 {
+    font-size: 200px;
+    color: #07575B;
+}
+
+.thin-text {
+    font-weight: lighter;
+}
+
+.bold-color {
+    color: #003B46;
+}
+
+.custom-div {
+    padding: 20px;
+    text-align: center;
+}
+
+.client-color {
+    background-color: #66A5AD;
+}
+
+.mt-150 {
+    margin-top: 150px;
+}
