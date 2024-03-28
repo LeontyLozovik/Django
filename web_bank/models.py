@@ -47,6 +47,11 @@ class Client(models.Model):
         verbose_name='product',
         blank=True
     )
+    photo = models.ImageField(
+        upload_to='photos',
+        blank=True,
+        verbose_name="Product image"
+    )
 
     class Meta:
         unique_together = ('firstname', 'lastname')
@@ -86,6 +91,11 @@ class Product(models.Model):
         validators=[MinValueValidator(datetime.date.today())],
         blank=True,
         null=True
+    )
+    image = models.ImageField(
+        upload_to='photos/',
+        blank=True,
+        verbose_name="Product image"
     )
 
     class Meta:

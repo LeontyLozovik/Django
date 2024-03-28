@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
+<div>
     {% for p in persons %}
-        <div class="row justify-content-center client-color mt-4">
+        <div class="row justify-content-center client-color mt-4 w65">
             <div class="col-md-auto custom-div">{{ p.firstname }}</div>
             <div class="col-md-auto custom-div">{{ p.lastname }}</div>
             <div class="col-md-auto custom-div">{{ p.birthday }}</div>

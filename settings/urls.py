@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from web_bank import views
+from django.conf import settings
+from django.conf.urls.static import static
 from web_bank.views import *
 
 urlpatterns = [
@@ -27,4 +29,5 @@ urlpatterns = [
     path('famous-clients/', Persons.as_view(), name='clients'),
     path('products/', products, name='products', kwargs={'id': 0}),
     path('products/<int:id>/', products, name='products',),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

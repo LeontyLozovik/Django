@@ -3,12 +3,7 @@
 }
 
 .nav-text-color {
-    text-decoration: none;
     color: #66A5AD;
-}
-
-.nav-text-color: hover {
-    color: red;
 }
 
 .li-reg {
@@ -61,14 +56,33 @@
 }
 
 .custom-div {
-    padding: 20px;
+    padding: 10px;
+    padding-top: 0px;
     text-align: center;
 }
 
-.client-color {
+.custom-div-img {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.product-item-container {
     background-color: #66A5AD;
+    border 1px solid: #66A5AD;
+    border-radius: 30px;
+    margin: 10% 10%;
 }
 
 .mt-150 {
     margin-top: 150px;
+}
+
+.w65 {
+    width: 65%;
 }
