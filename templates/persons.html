@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div>
+<div class="person-container">
     {% for p in persons %}
-        <div class="row justify-content-center client-color mt-4 w65">
-            <div class="col-md-auto custom-div">{{ p.firstname }}</div>
-            <div class="col-md-auto custom-div">{{ p.lastname }}</div>
-            <div class="col-md-auto custom-div">{{ p.birthday }}</div>
-            <div class="col-md-auto custom-div">{{ p.age }}</div>
-            <div class="col-md-auto custom-div">{{ p.address }}</div>
-            <div class="col-md-auto custom-div">{{ p.sex }}</div>
+        <div class="row person-item-container">
+            <div class="custom-div-img">
+                <img class="img-radius" src="{{ p.photo.url }}" alt="photo" height="350" width="350">
+            </div>
+            <div class="col custom-div">
+                <div class="person-div">{{ p.firstname }} {{ p.lastname }}</div>
+                <div class="person-div">{{ p.birthdate|date:"d.m.Y" }}</div>
+                <div class="person-div">{{ p.age }} y.o.</div>
+            </div>
         </div>
     {% endfor %}
 </div>

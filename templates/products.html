@@ -5,7 +5,7 @@
     {% for p in products %}
         <div class="product-item-container">
             <div class="custom-div-img">
-                <img src="{{ p.image.url }}" alt="img" height="200" width="300">
+                <img class="img-radius" src="{{ p.image.url }}" alt="img" height="200" width="300">
             </div>
             <div class="custom-div"><b>{{ p.cred_type }}</b> '{{ p.product_name }}'</div>
         </div>

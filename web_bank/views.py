@@ -19,7 +19,7 @@ class Persons(ListView):
     model = Client
     template_name = 'persons.html'
     context_object_name = 'persons'
-    paginate_by = 10
+    paginate_by = 2
 
 
 def products(r, id):

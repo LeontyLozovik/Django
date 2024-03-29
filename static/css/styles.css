@@ -79,10 +79,36 @@
     margin: 10% 10%;
 }
 
+.person-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+
+.person-item-container {
+    justify-content: center;
+    width: 80%;
+    background-color: #66A5AD;
+    border 1px solid: #66A5AD;
+    border-radius: 30px;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 .mt-150 {
     margin-top: 150px;
 }
 
-.w65 {
-    width: 65%;
+.person-div {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.img-radius {
+    border-radius: 30px;
 }
