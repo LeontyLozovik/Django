@@ -1,4 +1,4 @@
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -18,11 +18,12 @@ def index(r):
     return render(r, 'index.html')
 
 
-class Persons(ListView):
+class Persons(LoginRequiredMixin, ListView):
     model = Client
     template_name = 'persons.html'
     context_object_name = 'persons'
     paginate_by = 2
+    login_url = '/login/'
 
 
 def products(r, id):
@@ -53,3 +54,8 @@ class LoginUser(LoginView):
 
     def get_success_url(self) -> str:
         return reverse_lazy('index')
+
+
+def logout_user(r):
+    logout(r)
+    return redirect('login')

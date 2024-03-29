@@ -29,5 +29,6 @@ urlpatterns = [
     path('famous-clients/', Persons.as_view(), name='clients'),
     path('products/', products, name='products', kwargs={'id': 0}),
     path('products/<int:id>/', products, name='products',),
+    path('logout/', logout_user, name='logout',),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
