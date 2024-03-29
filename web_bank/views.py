@@ -1,6 +1,9 @@
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
@@ -27,7 +30,10 @@ def products(r, id):
         product = Product.objects.get(id=id)
         return render(r, 'products.html', {'products': product})
     products = Product.objects.all()
-    return render(r, 'products.html', {'products': products})
+    paginator = Paginator(products, 6)
+    page_num = r.GET.get('page')
+    page_obj = paginator.get_page(page_num)
+    return render(r, 'products.html', {'products': products, 'page_obj': page_obj})
 
 
 class RegisterUser(CreateView):
@@ -47,4 +53,3 @@ class LoginUser(LoginView):
 
     def get_success_url(self) -> str:
         return reverse_lazy('index')
-

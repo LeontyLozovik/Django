@@ -17,6 +17,22 @@
     <main class="main-container">
         {% block content %}
         {% endblock %}
+        <nav>
+            <ul>
+                {% if page_obj.has_previous %}
+                    <li>
+                        <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>
+                    </li>
+                {% endif %}
+            </ul>
+            <ul>
+                {% if page_obj.has_next %}
+                    <li>
+                        <a href="?page={{ page_obj.next_page_number }}">&gt;</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
     </main>
 </body>
 </html>
