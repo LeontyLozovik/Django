@@ -29,7 +29,7 @@ class Persons(LoginRequiredMixin, ListView):
 def products(r, id):
     if id:
         product = Product.objects.get(id=id)
-        return render(r, 'products.html', {'products': product})
+        return render(r, 'product.html', {'product': product})
     products = Product.objects.all()
     paginator = Paginator(products, 6)
     page_num = r.GET.get('page')

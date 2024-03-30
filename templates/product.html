@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="product-container">
+    <div class="product-item-container">
+        <div class="custom-div-img">
+            <img class="img-radius" src="{{ product.image.url }}" alt="img" height="200" width="300">
+        </div>
+        <div class="custom-div"><b>{{ product.cred_type }}</b> '{{ product.product_name }}'</div>
+        <div class="custom-div">{{ product.description }}</div>
+        <div class="custom-div">{{ product.start_date }}</div>
+        <div class="custom-div">{{ product.end_date }}</div>
+        <button type="button">Make request</button>
+    </div>
+</div>
+{% endblock %}
