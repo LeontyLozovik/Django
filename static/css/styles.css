@@ -153,3 +153,33 @@
 .list-pages .page-num:hover {
     opacity: 0.6;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #07575B;
+    color: #66A5AD;
+    padding: 10px 20px;
+}
+
+.footer-left {
+    margin-left: 5%;
+}
+
+.footer-left p {
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.footer-right {
+    margin-right: 5%;
+}
+
+.footer-right a {
+    margin-left: 10px;
+    color: #66A5AD;
+}
+
+.footer-right a:hover {
+    color: #C4DFE6;
+}
