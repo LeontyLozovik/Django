@@ -3,12 +3,20 @@
 {% block content %}
 <div class="main-content mt-150">
     <div class="main-content-inner">
-        <form method="post">
+        <form class="reg-container" method="post">
 
             {% csrf_token %}
-            {{ form.as_p }}
-
-            <input type="submit" value="Log in">
+            <h1 class="reg-form-title">Log In</h1>
+            {% for f in form %}
+                <p>
+                    <label class="form-label font-17" for="{{ f.id_for_label }}">{{ f.label }}</label>
+                    {{ f }}
+                </p>
+                <div class="form-error">
+                    {{ f.errors }}
+                </div>
+            {% endfor %}
+            <button class="btn submit-reg-btn" type="submit">Log In</button>
         </form>
     </div>
 </div>
